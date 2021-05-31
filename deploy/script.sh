@@ -1,4 +1,6 @@
-#!/bin/bash -xe
+#!/bin/bash
+
+set -xe
 # DEVELOPMENT ALIAS VERSION
 
 aws lambda get-alias --function-name $DEPLOY_FUNCTION_NAME --name $DEPLOY_ALIAS_NAME > output.json
