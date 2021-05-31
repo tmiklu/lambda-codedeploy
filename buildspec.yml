@@ -8,6 +8,11 @@ phases:
       #- sam package --template-file template.yaml --s3-bucket aws-sam-cli-managed-default-samclisourcebucket-1r58ccb14516j --output-template-file packaged-template.yml
       - sam build
       - sam deploy
+  post_build:
+    on-failure: ABORT
+    commands:
+      - chmod +x deploy/script.sh
+      - bash deploy/script.sh
 artifacts:
   files:
     - packaged-template.yml
