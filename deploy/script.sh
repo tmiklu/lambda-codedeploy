@@ -27,5 +27,5 @@ aws s3 cp $DEPLOY_APPSPEC_FILE s3://$DEPLOY_BUCKET_NAME/$DEPLOY_APPSPEC_FILE
 
 export REVISION="revisionType=S3,s3Location={bucket=$DEPLOY_BUCKET_NAME,key=$DEPLOY_BUCKET_NAME/$DEPLOY_APPSPEC_FILE,bundleType=YAML}"
 
-aws deploy create-deployment --application-name=$DEPLOY_APPLICATION_NAME --deployment-group-name=$DEPLOYMENT_GROUP_NAME --revision=$REVISION --deployment-config-name='CodeDeployDefault.LambdaCanary10Percent1Minutes'
+aws deploy create-deployment --application-name=$DEPLOY_APPLICATION_NAME --deployment-group-name=$DEPLOYMENT_GROUP_NAME --revision=$REVISION --deployment-config-name='CodeDeployDefault.LambdaLinear10PercentEvery1Minute'
 
