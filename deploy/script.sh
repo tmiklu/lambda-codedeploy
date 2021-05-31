@@ -1,6 +1,5 @@
-#!/bin/bash
+#!/bin/bash -xe
 
-set -x -e
 # set -x echo all commands
 # set -e immediatelly stop script
 
