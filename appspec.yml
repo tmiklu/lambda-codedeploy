@@ -4,6 +4,6 @@ Resources:
       Type: AWS::Lambda::Function
       Properties:
         Name: "sam-app-HelloWorldFunction-vgc3WBdIfbPy"
-        Alias: "sam-app-HelloWorldFunction-vgc3WBdIfbPy"
+        Alias: "lambda"
         CurrentVersion: "1"
         TargetVersion: "2"
