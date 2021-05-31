@@ -1,5 +1,4 @@
 #!/bin/bash -xe
-
 # DEVELOPMENT ALIAS VERSION
 
 aws lambda get-alias --function-name $DEPLOY_FUNCTION_NAME --name $DEPLOY_ALIAS_NAME > output.json
@@ -33,3 +32,4 @@ DEVELOPMENT_ALIAS_VERSION=$(cat output.json | jq -r '.FunctionVersion')
 #    --deployment-group-name=$DEPLOYMENT_GROUP_NAME \ 
 #    --revision=$REVISION \
 #    --deployment-config-name='CodeDeployDefault.LambdaCanary10Percent1Minutes'
+
