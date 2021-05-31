@@ -12,8 +12,7 @@ phases:
   post_build:
     on-failure: ABORT
     commands:
-      - chmod +x deploy/script.sh
-      - bash deploy/script.sh
+      - chmod +x deploy/script.sh && deploy/script.sh
 artifacts:
   files:
     - packaged-template.yaml
