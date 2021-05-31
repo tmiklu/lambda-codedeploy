@@ -9,6 +9,7 @@ phases:
       #- sam build
       #- sam deploy
       - sam package --template-file template.yaml --s3-bucket codedeploy-vls-lambda --output-template-file packaged-template.yaml
+      - sam deploy
   post_build:
     on-failure: ABORT
     commands:
