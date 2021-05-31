@@ -1,9 +1,9 @@
 version: 0.0
 Resources:
-  - HelloWorldFunction:
+  - sam-app-HelloWorldFunction-vgc3WBdIfbPy:
       Type: AWS::Lambda::Function
       Properties:
-        Name: "HelloWorldFunction"
-        Alias: "HelloWorldFunction"
+        Name: "sam-app-HelloWorldFunction-vgc3WBdIfbPy"
+        Alias: "sam-app-HelloWorldFunction-vgc3WBdIfbPy"
         CurrentVersion: "1"
         TargetVersion: "2"
