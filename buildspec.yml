@@ -12,7 +12,7 @@ phases:
   post_build:
     on-failure: ABORT
     commands:
-      - sam deploy --template-file package.yaml --stack-name sam-app --capabilities CAPABILITY_IAM
+      - sam deploy --template-file package.yaml --stack-name sam-app --capabilities CAPABILITY_IAM --no-confirm-changeset
       #- chmod +x deploy/script.sh 
       #- bash deploy/script.sh
 artifacts:
