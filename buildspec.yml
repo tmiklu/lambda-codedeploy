@@ -9,12 +9,13 @@ phases:
       #- sam build
       #- sam deploy
       - sam package --template-file template.yaml --s3-bucket codedeploy-vls-lambda --output-template-file package.yaml
-  post_build:
-    on-failure: ABORT
-    commands:
-      - sam deploy --template-file package.yaml --stack-name sam-app --capabilities CAPABILITY_IAM --no-confirm-changeset
-      #- chmod +x deploy/script.sh 
-      #- bash deploy/script.sh
+#  post_build:
+#    on-failure: ABORT
+#    commands:
+#      - sam deploy --template-file package.yaml --stack-name sam-app --capabilities CAPABILITY_IAM --no-confirm-changeset
+#      #- chmod +x deploy/script.sh 
+#      #- bash deploy/script.sh
 artifacts:
   files:
+    - template.yaml
     - package.yaml
