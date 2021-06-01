@@ -16,6 +16,7 @@ phases:
 #      #- chmod +x deploy/script.sh 
 #      #- bash deploy/script.sh
 artifacts:
+  type: zip
   files:
     - template.yaml
     - package.yaml
