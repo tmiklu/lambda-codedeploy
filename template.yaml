@@ -23,6 +23,16 @@ Resources:
           Properties:
             Path: /hello
             Method: get
+      DeploymentPreference:
+       Type: Canary10Percent10Minutes 
+       Alarms:
+         # A list of alarms that you want to monitor
+         - !Ref AliasErrorMetricGreaterThanZeroAlarm
+         - !Ref LatestVersionErrorMetricGreaterThanZeroAlarm
+       Hooks:
+         # Validation Lambda functions that are run before & after traffic shifting
+         PreTraffic: !Ref PreTrafficLambdaFunction
+         PostTraffic: !Ref PostTrafficLambdaFunction
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
